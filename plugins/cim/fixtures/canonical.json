@@ -1,0 +1,130 @@
+{
+  "observations": [
+    {
+      "site": "SiteA",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-a.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "workload",
+      "method": "synthetic-monthly-summary",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "synthetic-site-a-2026-10#WorkloadEnergy",
+      "source_record_id": "synthetic-site-a-2026-10",
+      "metric_id": "urn:greendigit:cim:draft:workload-energy",
+      "value": 12500.0,
+      "unit": "Wh",
+      "original": {
+        "value": 12.5,
+        "unit": "kWh"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "synthetic-monthly-1",
+      "provenance": {
+        "source": "synthetic-prototype",
+        "field": "WorkloadEnergy",
+        "record": {
+          "record_id": "synthetic-site-a-2026-10",
+          "meta": {
+            "site_id": [
+              "SiteA"
+            ],
+            "vo": [
+              "example-vo"
+            ],
+            "accounting_instance": [
+              "ce-a.example"
+            ]
+          },
+          "components": [
+            {
+              "name": "WorkloadEnergy",
+              "amount": 12.5,
+              "scores": []
+            },
+            {
+              "name": "Cores",
+              "amount": 4,
+              "scores": []
+            }
+          ],
+          "start_time": "2026-10-01T00:00:00Z",
+          "stop_time": "2026-11-01T00:00:00Z"
+        }
+      }
+    },
+    {
+      "site": "SiteB",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-b.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "workload",
+      "method": "synthetic-monthly-summary",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "synthetic-site-b-2026-10#WorkloadEnergy",
+      "source_record_id": "synthetic-site-b-2026-10",
+      "metric_id": "urn:greendigit:cim:draft:workload-energy",
+      "value": 7000,
+      "unit": "Wh",
+      "original": {
+        "value": 7,
+        "unit": "kWh"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "synthetic-monthly-1",
+      "provenance": {
+        "source": "synthetic-prototype",
+        "field": "WorkloadEnergy",
+        "record": {
+          "record_id": "synthetic-site-b-2026-10",
+          "meta": {
+            "site_id": [
+              "SiteB"
+            ],
+            "vo": [
+              "example-vo"
+            ],
+            "accounting_instance": [
+              "ce-b.example"
+            ]
+          },
+          "components": [
+            {
+              "name": "WorkloadEnergy",
+              "amount": 7,
+              "scores": []
+            },
+            {
+              "name": "Cores",
+              "amount": 4,
+              "scores": []
+            }
+          ],
+          "start_time": "2026-10-01T00:00:00Z",
+          "stop_time": "2026-11-01T00:00:00Z"
+        }
+      }
+    }
+  ],
+  "ignored_fields": [
+    {
+      "source_record_id": "synthetic-site-a-2026-10",
+      "field": "Cores",
+      "reason": "Resource count is outside this energy mapping"
+    },
+    {
+      "source_record_id": "synthetic-site-b-2026-10",
+      "field": "Cores",
+      "reason": "Resource count is outside this energy mapping"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "record_id": "synthetic-site-a-2026-10",
+  "meta": {
+    "site_id": [
+      "SiteA"
+    ],
+    "vo": [
+      "example-vo"
+    ],
+    "accounting_instance": [
+      "ce-a.example"
+    ]
+  },
+  "components": [
+    {
+      "name": "WorkloadEnergy",
+      "amount": 12.5,
+      "scores": []
+    },
+    {
+      "name": "Cores",
+      "amount": 4,
+      "scores": []
+    }
+  ],
+  "start_time": "2026-10-01T00:00:00Z",
+  "stop_time": "2026-11-01T00:00:00Z"
+}

@@ -1,0 +1,169 @@
+{
+  "target": "pear-draft-2026-10-27",
+  "records": [
+    {
+      "record_id": "cim-064edc79b129ef8e5b58f7b661c16f34167824fc3209e0e72cb09fb50c914a2b",
+      "accounting": {
+        "key": {
+          "month": "2026-10",
+          "vo": "example-vo",
+          "site": "SiteA",
+          "accounting_instance": "ce-a.example",
+          "instance_type": "grid"
+        },
+        "values": {
+          "raw": [
+            {
+              "metric": "energy_consumed",
+              "value": 12500.0,
+              "unit": "Wh",
+              "tags": {
+                "method": "synthetic-monthly-summary"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "record_id": "cim-e037661f0fa5362418d73a07b807777d306228ca3e4d12e9d8178632d1235d23",
+      "accounting": {
+        "key": {
+          "month": "2026-10",
+          "vo": "example-vo",
+          "site": "SiteB",
+          "accounting_instance": "ce-b.example",
+          "instance_type": "grid"
+        },
+        "values": {
+          "raw": [
+            {
+              "metric": "energy_consumed",
+              "value": 7000,
+              "unit": "Wh",
+              "tags": {
+                "method": "synthetic-monthly-summary"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "sidecar": {
+    "cim-064edc79b129ef8e5b58f7b661c16f34167824fc3209e0e72cb09fb50c914a2b": {
+      "site": "SiteA",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-a.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "workload",
+      "method": "synthetic-monthly-summary",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "synthetic-site-a-2026-10#WorkloadEnergy",
+      "source_record_id": "synthetic-site-a-2026-10",
+      "metric_id": "urn:greendigit:cim:draft:workload-energy",
+      "value": 12500.0,
+      "unit": "Wh",
+      "original": {
+        "value": 12.5,
+        "unit": "kWh"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "synthetic-monthly-1",
+      "provenance": {
+        "source": "synthetic-prototype",
+        "field": "WorkloadEnergy",
+        "record": {
+          "record_id": "synthetic-site-a-2026-10",
+          "meta": {
+            "site_id": [
+              "SiteA"
+            ],
+            "vo": [
+              "example-vo"
+            ],
+            "accounting_instance": [
+              "ce-a.example"
+            ]
+          },
+          "components": [
+            {
+              "name": "WorkloadEnergy",
+              "amount": 12.5,
+              "scores": []
+            },
+            {
+              "name": "Cores",
+              "amount": 4,
+              "scores": []
+            }
+          ],
+          "start_time": "2026-10-01T00:00:00Z",
+          "stop_time": "2026-11-01T00:00:00Z"
+        }
+      }
+    },
+    "cim-e037661f0fa5362418d73a07b807777d306228ca3e4d12e9d8178632d1235d23": {
+      "site": "SiteB",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-b.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "workload",
+      "method": "synthetic-monthly-summary",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "synthetic-site-b-2026-10#WorkloadEnergy",
+      "source_record_id": "synthetic-site-b-2026-10",
+      "metric_id": "urn:greendigit:cim:draft:workload-energy",
+      "value": 7000,
+      "unit": "Wh",
+      "original": {
+        "value": 7,
+        "unit": "kWh"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "synthetic-monthly-1",
+      "provenance": {
+        "source": "synthetic-prototype",
+        "field": "WorkloadEnergy",
+        "record": {
+          "record_id": "synthetic-site-b-2026-10",
+          "meta": {
+            "site_id": [
+              "SiteB"
+            ],
+            "vo": [
+              "example-vo"
+            ],
+            "accounting_instance": [
+              "ce-b.example"
+            ]
+          },
+          "components": [
+            {
+              "name": "WorkloadEnergy",
+              "amount": 7,
+              "scores": []
+            },
+            {
+              "name": "Cores",
+              "amount": 4,
+              "scores": []
+            }
+          ],
+          "start_time": "2026-10-01T00:00:00Z",
+          "stop_time": "2026-11-01T00:00:00Z"
+        }
+      }
+    }
+  }
+}

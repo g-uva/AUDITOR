@@ -1,0 +1,14 @@
+{
+  "version": "synthetic-monthly-1",
+  "source": "synthetic-prototype",
+  "fields": {
+    "WorkloadEnergy": {
+      "metric_id": "urn:greendigit:cim:draft:workload-energy",
+      "unit": "kWh"
+    },
+    "Cores": {
+      "ignore": true,
+      "reason": "Resource count is outside this energy mapping"
+    }
+  }
+}

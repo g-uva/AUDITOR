@@ -1,0 +1,69 @@
+{
+  "@context": {
+    "gd": "urn:greendigit:cim:draft:",
+    "saref": "https://saref.etsi.org/core/",
+    "schema": "https://schema.org/",
+    "gd:metadata": {
+      "@id": "urn:greendigit:cim:draft:metadata",
+      "@type": "@json"
+    }
+  },
+  "@id": "synthetic-site-a-2026-10#WorkloadEnergy",
+  "gd:metadata": {
+    "site": "SiteA",
+    "producer": "central-grid-producer",
+    "accounting_instance": "ce-a.example",
+    "instance_type": "grid",
+    "vo": "example-vo",
+    "scope": "monthly-summary",
+    "boundary": "workload",
+    "method": "synthetic-monthly-summary",
+    "period": {
+      "start": "2026-10-01T00:00:00Z",
+      "end": "2026-11-01T00:00:00Z"
+    },
+    "source_record_id": "synthetic-site-a-2026-10",
+    "original": {
+      "value": 12.5,
+      "unit": "kWh"
+    },
+    "catalogue_version": "greendigit-draft-1",
+    "mapping_version": "synthetic-monthly-1",
+    "provenance": {
+      "source": "synthetic-prototype",
+      "field": "WorkloadEnergy",
+      "record": {
+        "record_id": "synthetic-site-a-2026-10",
+        "meta": {
+          "site_id": [
+            "SiteA"
+          ],
+          "vo": [
+            "example-vo"
+          ],
+          "accounting_instance": [
+            "ce-a.example"
+          ]
+        },
+        "components": [
+          {
+            "name": "WorkloadEnergy",
+            "amount": 12.5,
+            "scores": []
+          },
+          {
+            "name": "Cores",
+            "amount": 4,
+            "scores": []
+          }
+        ],
+        "start_time": "2026-10-01T00:00:00Z",
+        "stop_time": "2026-11-01T00:00:00Z"
+      }
+    }
+  },
+  "@type": "schema:PropertyValue",
+  "schema:propertyID": "urn:greendigit:cim:draft:workload-energy",
+  "schema:value": 12500.0,
+  "schema:unitText": "Wh"
+}

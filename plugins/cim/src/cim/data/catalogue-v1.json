@@ -1,0 +1,121 @@
+{
+  "version": "greendigit-draft-1",
+  "status": "Local draft profile seeded from the requested chapter topics; chapter not supplied. Not an approved standard.",
+  "metrics": {
+    "urn:greendigit:cim:draft:total-facility-energy": {
+      "identifier": "urn:greendigit:cim:draft:total-facility-energy",
+      "meaning": "Energy entering the declared facility boundary over the observation period",
+      "quantity_kind": "energy",
+      "unit": "Wh",
+      "boundary": "facility",
+      "status": "draft",
+      "allowed_context": {
+        "scope": [
+          "job",
+          "monthly-summary"
+        ],
+        "required": [
+          "site",
+          "producer",
+          "accounting_instance",
+          "instance_type",
+          "period",
+          "method"
+        ]
+      },
+      "aggregation": "Period total. Only disjoint periods and non-overlapping boundaries may be added by a caller; existing summaries must not be re-aggregated. CIM performs no aggregation."
+    },
+    "urn:greendigit:cim:draft:it-energy": {
+      "identifier": "urn:greendigit:cim:draft:it-energy",
+      "meaning": "Energy supplied to IT equipment over the observation period",
+      "quantity_kind": "energy",
+      "unit": "Wh",
+      "boundary": "it-equipment",
+      "status": "draft",
+      "allowed_context": {
+        "scope": [
+          "job",
+          "monthly-summary"
+        ],
+        "required": [
+          "site",
+          "producer",
+          "accounting_instance",
+          "instance_type",
+          "period",
+          "method"
+        ]
+      },
+      "aggregation": "Period total. Only disjoint periods and non-overlapping boundaries may be added by a caller; existing summaries must not be re-aggregated. CIM performs no aggregation."
+    },
+    "urn:greendigit:cim:draft:water-input": {
+      "identifier": "urn:greendigit:cim:draft:water-input",
+      "meaning": "Water entering the declared facility boundary over the observation period",
+      "quantity_kind": "volume",
+      "unit": "L",
+      "boundary": "facility-water-input",
+      "status": "draft",
+      "allowed_context": {
+        "scope": [
+          "job",
+          "monthly-summary"
+        ],
+        "required": [
+          "site",
+          "producer",
+          "accounting_instance",
+          "instance_type",
+          "period",
+          "method"
+        ]
+      },
+      "aggregation": "Period total. Only disjoint periods and non-overlapping boundaries may be added by a caller; existing summaries must not be re-aggregated. CIM performs no aggregation."
+    },
+    "urn:greendigit:cim:draft:operational-co2e": {
+      "identifier": "urn:greendigit:cim:draft:operational-co2e",
+      "meaning": "Operational greenhouse gas emissions expressed as CO2 equivalent; method must declare accounting basis",
+      "quantity_kind": "mass-co2-equivalent",
+      "unit": "kgCO2e",
+      "boundary": "facility-operations",
+      "status": "draft",
+      "allowed_context": {
+        "scope": [
+          "job",
+          "monthly-summary"
+        ],
+        "required": [
+          "site",
+          "producer",
+          "accounting_instance",
+          "instance_type",
+          "period",
+          "method"
+        ]
+      },
+      "aggregation": "Period total. Only disjoint periods and non-overlapping boundaries may be added by a caller; existing summaries must not be re-aggregated. CIM performs no aggregation."
+    },
+    "urn:greendigit:cim:draft:workload-energy": {
+      "identifier": "urn:greendigit:cim:draft:workload-energy",
+      "meaning": "Energy attributed to the declared workload; allocation method must be specified",
+      "quantity_kind": "energy",
+      "unit": "Wh",
+      "boundary": "workload",
+      "status": "provisional",
+      "allowed_context": {
+        "scope": [
+          "job",
+          "monthly-summary"
+        ],
+        "required": [
+          "site",
+          "producer",
+          "accounting_instance",
+          "instance_type",
+          "period",
+          "method"
+        ]
+      },
+      "aggregation": "Period total. Only disjoint periods and non-overlapping boundaries may be added by a caller; existing summaries must not be re-aggregated. CIM performs no aggregation."
+    }
+  }
+}

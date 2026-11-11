@@ -4,9 +4,15 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "auditor-cim-mock"
-version = "0.1.0"
-description = "Temporary local CIM transport for the AUDITOR to PEAR validation flow"
+version = "0.2.0"
+description = "Local GreenDIGIT draft metric harmonisation and experimental PEAR export"
 requires-python = ">=3.11"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[project.scripts]
+cim = "cim.cli:main"
+
+[tool.setuptools.package-data]
+cim = ["data/*.json"]

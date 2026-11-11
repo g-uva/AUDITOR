@@ -1,0 +1,24 @@
+{
+  "site": {
+    "meta": "site_id"
+  },
+  "producer": "central-grid-producer",
+  "accounting_instance": {
+    "meta": "accounting_instance"
+  },
+  "instance_type": "grid",
+  "vo": {
+    "meta": "vo"
+  },
+  "scope": "monthly-summary",
+  "boundary": "workload",
+  "method": "synthetic-monthly-summary",
+  "period": {
+    "start": {
+      "field": "start_time"
+    },
+    "end": {
+      "field": "stop_time"
+    }
+  }
+}

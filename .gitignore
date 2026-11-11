@@ -8,3 +8,5 @@ dist/
 /venv
 *~
 auditor-client/client.db
+.venv/
+demo/
