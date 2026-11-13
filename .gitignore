@@ -10,3 +10,7 @@ dist/
 auditor-client/client.db
 .venv/
 demo/
+# Keep the local demo private while including the CIM-KPI demo step.
+!plugins/cim/demo/
+plugins/cim/demo/*
+!plugins/cim/demo/05_enrich_kpis/

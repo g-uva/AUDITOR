@@ -1,0 +1,1149 @@
+{
+  "observations": [
+    {
+      "site": "SiteA",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-a.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "it-equipment",
+      "method": "synthetic-monthly-summary",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "mock-SiteA-it-2026-10",
+      "source_record_id": "mock-SiteA-it-2026-10",
+      "metric_id": "urn:greendigit:cim:draft:it-energy",
+      "value": 100000,
+      "unit": "Wh",
+      "original": {
+        "value": 100,
+        "unit": "kWh"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "synthetic-monthly-1",
+      "provenance": {
+        "source": "synthetic-prototype",
+        "field": "it-energy",
+        "synthetic": true
+      }
+    },
+    {
+      "site": "SiteA",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-a.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "facility",
+      "method": "synthetic-monthly-summary",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "mock-SiteA-facility-2026-10",
+      "source_record_id": "mock-SiteA-facility-2026-10",
+      "metric_id": "urn:greendigit:cim:draft:total-facility-energy",
+      "value": 150000,
+      "unit": "Wh",
+      "original": {
+        "value": 150,
+        "unit": "kWh"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "synthetic-monthly-1",
+      "provenance": {
+        "source": "synthetic-prototype",
+        "field": "facility-energy",
+        "synthetic": true
+      }
+    },
+    {
+      "site": "SiteB",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-b.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "it-equipment",
+      "method": "synthetic-monthly-summary",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "mock-SiteB-it-2026-10",
+      "source_record_id": "mock-SiteB-it-2026-10",
+      "metric_id": "urn:greendigit:cim:draft:it-energy",
+      "value": 200000,
+      "unit": "Wh",
+      "original": {
+        "value": 200,
+        "unit": "kWh"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "synthetic-monthly-1",
+      "provenance": {
+        "source": "synthetic-prototype",
+        "field": "it-energy",
+        "synthetic": true
+      }
+    },
+    {
+      "site": "SiteB",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-b.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "facility",
+      "method": "synthetic-monthly-summary",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "mock-SiteB-facility-2026-10",
+      "source_record_id": "mock-SiteB-facility-2026-10",
+      "metric_id": "urn:greendigit:cim:draft:total-facility-energy",
+      "value": 250000,
+      "unit": "Wh",
+      "original": {
+        "value": 250,
+        "unit": "kWh"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "synthetic-monthly-1",
+      "provenance": {
+        "source": "synthetic-prototype",
+        "field": "facility-energy",
+        "synthetic": true
+      }
+    },
+    {
+      "site": "SiteA",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-a.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "facility-to-it",
+      "method": "facility-energy/it-energy:v1",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "cim-kpi-eimps-1912ae09c0d62641f0a21a07b17e1b57624db59b3495a0ba4a05e3097f477394",
+      "source_record_id": "eimps-675f496d29d41f020b517b90f07477b28e9be5f04f07b710ff35abd37ce81e44",
+      "metric_id": "urn:greendigit:cim:draft:pue",
+      "value": 1.5,
+      "unit": "1",
+      "original": {
+        "value": 1.5,
+        "unit": "1"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "eimps-mock-v1",
+      "provenance": {
+        "source": "synthetic-eimps",
+        "field": "pue",
+        "derived": true,
+        "synthetic": true,
+        "request": {
+          "schema_version": "eimps-mock-v1",
+          "type": "pue",
+          "details": {
+            "period": {
+              "start": "2026-10-01T00:00:00Z",
+              "end": "2026-11-01T00:00:00Z"
+            },
+            "site_id": "SiteA"
+          }
+        },
+        "response": {
+          "schema_version": "eimps-mock-v1",
+          "type": "pue",
+          "metric_id": "urn:greendigit:cim:draft:pue",
+          "unit": "1",
+          "site_id": "SiteA",
+          "location_id": null,
+          "period": {
+            "start": "2026-10-01T00:00:00Z",
+            "end": "2026-11-01T00:00:00Z"
+          },
+          "boundary": "facility-to-it",
+          "basis": "facility/it",
+          "method": "synthetic-eimps",
+          "formula_version": "facility-energy/it-energy:v1",
+          "accounting_mode": "location-based",
+          "synthetic": true,
+          "input_references": [
+            {
+              "value": 150,
+              "unit": "kWh",
+              "basis": "facility",
+              "boundary_id": "SiteA-whole-site",
+              "period": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z"
+              },
+              "source_observation_id": "mock-SiteA-facility-2026-10"
+            },
+            {
+              "value": 100,
+              "unit": "kWh",
+              "basis": "it",
+              "boundary_id": "SiteA-whole-site",
+              "period": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z"
+              },
+              "source_observation_id": "mock-SiteA-it-2026-10"
+            }
+          ],
+          "factor_references": [],
+          "dependencies": [],
+          "value": 1.5,
+          "result_id": "eimps-675f496d29d41f020b517b90f07477b28e9be5f04f07b710ff35abd37ce81e44"
+        },
+        "source_observation_id": "mock-SiteA-it-2026-10"
+      }
+    },
+    {
+      "site": "SiteA",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-a.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "location-electricity",
+      "method": "synthetic-location-time-lookup:v1",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "cim-kpi-eimps-28e50aabc65b09d86eba42d6d2b3a26d23911cea4562a44bceda2321e39893d3",
+      "source_record_id": "eimps-8bbb118c7e2da853c30fbd67f2590cf7c873218260e457f7779b1e806b2cae38",
+      "metric_id": "urn:greendigit:cim:draft:carbon-intensity",
+      "value": 200,
+      "unit": "gCO2e/kWh",
+      "original": {
+        "value": 200,
+        "unit": "gCO2e/kWh"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "eimps-mock-v1",
+      "provenance": {
+        "source": "synthetic-eimps",
+        "field": "ci",
+        "derived": true,
+        "synthetic": true,
+        "request": {
+          "schema_version": "eimps-mock-v1",
+          "type": "ci",
+          "details": {
+            "period": {
+              "start": "2026-10-01T00:00:00Z",
+              "end": "2026-11-01T00:00:00Z"
+            },
+            "location_id": "mock-region-a"
+          }
+        },
+        "response": {
+          "schema_version": "eimps-mock-v1",
+          "type": "ci",
+          "metric_id": "urn:greendigit:cim:draft:carbon-intensity",
+          "unit": "gCO2e/kWh",
+          "site_id": null,
+          "location_id": "mock-region-a",
+          "period": {
+            "start": "2026-10-01T00:00:00Z",
+            "end": "2026-11-01T00:00:00Z"
+          },
+          "boundary": "location-electricity",
+          "basis": "electricity",
+          "method": "synthetic-eimps",
+          "formula_version": "synthetic-location-time-lookup:v1",
+          "accounting_mode": "location-based",
+          "synthetic": true,
+          "input_references": [],
+          "factor_references": [
+            {
+              "factor_id": "mock-region-a-2026-10-synthetic",
+              "location_id": "mock-region-a",
+              "period": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z"
+              },
+              "value": 200,
+              "unit": "gCO2e/kWh",
+              "accounting_mode": "location-based",
+              "synthetic": true
+            }
+          ],
+          "dependencies": [],
+          "value": 200,
+          "result_id": "eimps-8bbb118c7e2da853c30fbd67f2590cf7c873218260e457f7779b1e806b2cae38"
+        },
+        "source_observation_id": "mock-SiteA-it-2026-10"
+      }
+    },
+    {
+      "site": "SiteA",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-a.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "facility-operations",
+      "method": "electricity-energy*pue-if-it*ci:v1",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "cim-kpi-eimps-a9890476bda4c172d63ceb28ae27863c304bcbfe4f38fd537eef97748f234591",
+      "source_record_id": "eimps-1225bf207b2c073622aa235f09e80b58b18c29b7b54160b94f5e8fa301c297b2",
+      "metric_id": "urn:greendigit:cim:draft:operational-co2e",
+      "value": 30.0,
+      "unit": "kgCO2e",
+      "original": {
+        "value": 30.0,
+        "unit": "kgCO2e"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "eimps-mock-v1",
+      "provenance": {
+        "source": "synthetic-eimps",
+        "field": "cfp",
+        "derived": true,
+        "synthetic": true,
+        "request": {
+          "schema_version": "eimps-mock-v1",
+          "type": "cfp",
+          "details": {
+            "period": {
+              "start": "2026-10-01T00:00:00Z",
+              "end": "2026-11-01T00:00:00Z"
+            },
+            "site_id": "SiteA",
+            "location_id": "mock-region-a",
+            "energy": {
+              "value": 100000,
+              "unit": "Wh",
+              "basis": "it",
+              "source_observation_id": "mock-SiteA-it-2026-10"
+            }
+          }
+        },
+        "response": {
+          "schema_version": "eimps-mock-v1",
+          "type": "cfp",
+          "metric_id": "urn:greendigit:cim:draft:operational-co2e",
+          "unit": "gCO2e",
+          "site_id": "SiteA",
+          "location_id": "mock-region-a",
+          "period": {
+            "start": "2026-10-01T00:00:00Z",
+            "end": "2026-11-01T00:00:00Z"
+          },
+          "boundary": "facility-operations",
+          "basis": "it",
+          "method": "synthetic-eimps",
+          "formula_version": "electricity-energy*pue-if-it*ci:v1",
+          "accounting_mode": "location-based",
+          "synthetic": true,
+          "input_references": [
+            {
+              "value": 100000,
+              "unit": "Wh",
+              "basis": "it",
+              "source_observation_id": "mock-SiteA-it-2026-10"
+            }
+          ],
+          "factor_references": [
+            {
+              "result_id": "eimps-675f496d29d41f020b517b90f07477b28e9be5f04f07b710ff35abd37ce81e44",
+              "used": true
+            },
+            {
+              "result_id": "eimps-8bbb118c7e2da853c30fbd67f2590cf7c873218260e457f7779b1e806b2cae38",
+              "used": true
+            }
+          ],
+          "dependencies": [
+            {
+              "schema_version": "eimps-mock-v1",
+              "type": "pue",
+              "metric_id": "urn:greendigit:cim:draft:pue",
+              "unit": "1",
+              "site_id": "SiteA",
+              "location_id": null,
+              "period": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z"
+              },
+              "boundary": "facility-to-it",
+              "basis": "facility/it",
+              "method": "synthetic-eimps",
+              "formula_version": "facility-energy/it-energy:v1",
+              "accounting_mode": "location-based",
+              "synthetic": true,
+              "input_references": [
+                {
+                  "value": 150,
+                  "unit": "kWh",
+                  "basis": "facility",
+                  "boundary_id": "SiteA-whole-site",
+                  "period": {
+                    "start": "2026-10-01T00:00:00Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  },
+                  "source_observation_id": "mock-SiteA-facility-2026-10"
+                },
+                {
+                  "value": 100,
+                  "unit": "kWh",
+                  "basis": "it",
+                  "boundary_id": "SiteA-whole-site",
+                  "period": {
+                    "start": "2026-10-01T00:00:00Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  },
+                  "source_observation_id": "mock-SiteA-it-2026-10"
+                }
+              ],
+              "factor_references": [],
+              "dependencies": [],
+              "value": 1.5,
+              "result_id": "eimps-675f496d29d41f020b517b90f07477b28e9be5f04f07b710ff35abd37ce81e44"
+            },
+            {
+              "schema_version": "eimps-mock-v1",
+              "type": "ci",
+              "metric_id": "urn:greendigit:cim:draft:carbon-intensity",
+              "unit": "gCO2e/kWh",
+              "site_id": null,
+              "location_id": "mock-region-a",
+              "period": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z"
+              },
+              "boundary": "location-electricity",
+              "basis": "electricity",
+              "method": "synthetic-eimps",
+              "formula_version": "synthetic-location-time-lookup:v1",
+              "accounting_mode": "location-based",
+              "synthetic": true,
+              "input_references": [],
+              "factor_references": [
+                {
+                  "factor_id": "mock-region-a-2026-10-synthetic",
+                  "location_id": "mock-region-a",
+                  "period": {
+                    "start": "2026-10-01T00:00:00Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  },
+                  "value": 200,
+                  "unit": "gCO2e/kWh",
+                  "accounting_mode": "location-based",
+                  "synthetic": true
+                }
+              ],
+              "dependencies": [],
+              "value": 200,
+              "result_id": "eimps-8bbb118c7e2da853c30fbd67f2590cf7c873218260e457f7779b1e806b2cae38"
+            }
+          ],
+          "value": 30000.0,
+          "result_id": "eimps-1225bf207b2c073622aa235f09e80b58b18c29b7b54160b94f5e8fa301c297b2"
+        },
+        "source_observation_id": "mock-SiteA-it-2026-10"
+      }
+    },
+    {
+      "site": "SiteA",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-a.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "facility-operations",
+      "method": "electricity-energy*pue-if-it*ci:v1",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "cim-kpi-eimps-dc7bdb6e71dee1a615f2223242d9c8638f9c1d44b9b5c7476fa36a9bc421c695",
+      "source_record_id": "eimps-e5a69c830cae71efb53959ab704f77c432c1b167016dbe1a4026cc047a75c0b7",
+      "metric_id": "urn:greendigit:cim:draft:operational-co2e",
+      "value": 30.0,
+      "unit": "kgCO2e",
+      "original": {
+        "value": 30.0,
+        "unit": "kgCO2e"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "eimps-mock-v1",
+      "provenance": {
+        "source": "synthetic-eimps",
+        "field": "cfp",
+        "derived": true,
+        "synthetic": true,
+        "request": {
+          "schema_version": "eimps-mock-v1",
+          "type": "cfp",
+          "details": {
+            "period": {
+              "start": "2026-10-01T00:00:00Z",
+              "end": "2026-11-01T00:00:00Z"
+            },
+            "site_id": "SiteA",
+            "location_id": "mock-region-a",
+            "energy": {
+              "value": 150000,
+              "unit": "Wh",
+              "basis": "facility",
+              "source_observation_id": "mock-SiteA-facility-2026-10"
+            }
+          }
+        },
+        "response": {
+          "schema_version": "eimps-mock-v1",
+          "type": "cfp",
+          "metric_id": "urn:greendigit:cim:draft:operational-co2e",
+          "unit": "gCO2e",
+          "site_id": "SiteA",
+          "location_id": "mock-region-a",
+          "period": {
+            "start": "2026-10-01T00:00:00Z",
+            "end": "2026-11-01T00:00:00Z"
+          },
+          "boundary": "facility-operations",
+          "basis": "facility",
+          "method": "synthetic-eimps",
+          "formula_version": "electricity-energy*pue-if-it*ci:v1",
+          "accounting_mode": "location-based",
+          "synthetic": true,
+          "input_references": [
+            {
+              "value": 150000,
+              "unit": "Wh",
+              "basis": "facility",
+              "source_observation_id": "mock-SiteA-facility-2026-10"
+            }
+          ],
+          "factor_references": [
+            {
+              "result_id": "eimps-675f496d29d41f020b517b90f07477b28e9be5f04f07b710ff35abd37ce81e44",
+              "used": false
+            },
+            {
+              "result_id": "eimps-8bbb118c7e2da853c30fbd67f2590cf7c873218260e457f7779b1e806b2cae38",
+              "used": true
+            }
+          ],
+          "dependencies": [
+            {
+              "schema_version": "eimps-mock-v1",
+              "type": "pue",
+              "metric_id": "urn:greendigit:cim:draft:pue",
+              "unit": "1",
+              "site_id": "SiteA",
+              "location_id": null,
+              "period": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z"
+              },
+              "boundary": "facility-to-it",
+              "basis": "facility/it",
+              "method": "synthetic-eimps",
+              "formula_version": "facility-energy/it-energy:v1",
+              "accounting_mode": "location-based",
+              "synthetic": true,
+              "input_references": [
+                {
+                  "value": 150,
+                  "unit": "kWh",
+                  "basis": "facility",
+                  "boundary_id": "SiteA-whole-site",
+                  "period": {
+                    "start": "2026-10-01T00:00:00Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  },
+                  "source_observation_id": "mock-SiteA-facility-2026-10"
+                },
+                {
+                  "value": 100,
+                  "unit": "kWh",
+                  "basis": "it",
+                  "boundary_id": "SiteA-whole-site",
+                  "period": {
+                    "start": "2026-10-01T00:00:00Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  },
+                  "source_observation_id": "mock-SiteA-it-2026-10"
+                }
+              ],
+              "factor_references": [],
+              "dependencies": [],
+              "value": 1.5,
+              "result_id": "eimps-675f496d29d41f020b517b90f07477b28e9be5f04f07b710ff35abd37ce81e44"
+            },
+            {
+              "schema_version": "eimps-mock-v1",
+              "type": "ci",
+              "metric_id": "urn:greendigit:cim:draft:carbon-intensity",
+              "unit": "gCO2e/kWh",
+              "site_id": null,
+              "location_id": "mock-region-a",
+              "period": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z"
+              },
+              "boundary": "location-electricity",
+              "basis": "electricity",
+              "method": "synthetic-eimps",
+              "formula_version": "synthetic-location-time-lookup:v1",
+              "accounting_mode": "location-based",
+              "synthetic": true,
+              "input_references": [],
+              "factor_references": [
+                {
+                  "factor_id": "mock-region-a-2026-10-synthetic",
+                  "location_id": "mock-region-a",
+                  "period": {
+                    "start": "2026-10-01T00:00:00Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  },
+                  "value": 200,
+                  "unit": "gCO2e/kWh",
+                  "accounting_mode": "location-based",
+                  "synthetic": true
+                }
+              ],
+              "dependencies": [],
+              "value": 200,
+              "result_id": "eimps-8bbb118c7e2da853c30fbd67f2590cf7c873218260e457f7779b1e806b2cae38"
+            }
+          ],
+          "value": 30000.0,
+          "result_id": "eimps-e5a69c830cae71efb53959ab704f77c432c1b167016dbe1a4026cc047a75c0b7"
+        },
+        "source_observation_id": "mock-SiteA-facility-2026-10"
+      }
+    },
+    {
+      "site": "SiteB",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-b.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "facility-to-it",
+      "method": "facility-energy/it-energy:v1",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "cim-kpi-eimps-06a4d4606b9f063ff61c9d1c032d7c9a84b0528f61b278f9388f77a9ce8b5f5c",
+      "source_record_id": "eimps-43b7d1665056824953b811fdc372c49faf215fcc6a5672c773cab3ef0c23e6dd",
+      "metric_id": "urn:greendigit:cim:draft:pue",
+      "value": 1.25,
+      "unit": "1",
+      "original": {
+        "value": 1.25,
+        "unit": "1"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "eimps-mock-v1",
+      "provenance": {
+        "source": "synthetic-eimps",
+        "field": "pue",
+        "derived": true,
+        "synthetic": true,
+        "request": {
+          "schema_version": "eimps-mock-v1",
+          "type": "pue",
+          "details": {
+            "period": {
+              "start": "2026-10-01T00:00:00Z",
+              "end": "2026-11-01T00:00:00Z"
+            },
+            "site_id": "SiteB"
+          }
+        },
+        "response": {
+          "schema_version": "eimps-mock-v1",
+          "type": "pue",
+          "metric_id": "urn:greendigit:cim:draft:pue",
+          "unit": "1",
+          "site_id": "SiteB",
+          "location_id": null,
+          "period": {
+            "start": "2026-10-01T00:00:00Z",
+            "end": "2026-11-01T00:00:00Z"
+          },
+          "boundary": "facility-to-it",
+          "basis": "facility/it",
+          "method": "synthetic-eimps",
+          "formula_version": "facility-energy/it-energy:v1",
+          "accounting_mode": "location-based",
+          "synthetic": true,
+          "input_references": [
+            {
+              "value": 250,
+              "unit": "kWh",
+              "basis": "facility",
+              "boundary_id": "SiteB-whole-site",
+              "period": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z"
+              },
+              "source_observation_id": "mock-SiteB-facility-2026-10"
+            },
+            {
+              "value": 200,
+              "unit": "kWh",
+              "basis": "it",
+              "boundary_id": "SiteB-whole-site",
+              "period": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z"
+              },
+              "source_observation_id": "mock-SiteB-it-2026-10"
+            }
+          ],
+          "factor_references": [],
+          "dependencies": [],
+          "value": 1.25,
+          "result_id": "eimps-43b7d1665056824953b811fdc372c49faf215fcc6a5672c773cab3ef0c23e6dd"
+        },
+        "source_observation_id": "mock-SiteB-it-2026-10"
+      }
+    },
+    {
+      "site": "SiteB",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-b.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "location-electricity",
+      "method": "synthetic-location-time-lookup:v1",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "cim-kpi-eimps-51bea8d36d495eaf252453af5bd24f780263a60bcc998ca1121c7e8a9e330cca",
+      "source_record_id": "eimps-d0aa07595aab23dce2d39242ab646219a22dbf4dfddeeb264678e19b99149299",
+      "metric_id": "urn:greendigit:cim:draft:carbon-intensity",
+      "value": 400,
+      "unit": "gCO2e/kWh",
+      "original": {
+        "value": 400,
+        "unit": "gCO2e/kWh"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "eimps-mock-v1",
+      "provenance": {
+        "source": "synthetic-eimps",
+        "field": "ci",
+        "derived": true,
+        "synthetic": true,
+        "request": {
+          "schema_version": "eimps-mock-v1",
+          "type": "ci",
+          "details": {
+            "period": {
+              "start": "2026-10-01T00:00:00Z",
+              "end": "2026-11-01T00:00:00Z"
+            },
+            "location_id": "mock-region-b"
+          }
+        },
+        "response": {
+          "schema_version": "eimps-mock-v1",
+          "type": "ci",
+          "metric_id": "urn:greendigit:cim:draft:carbon-intensity",
+          "unit": "gCO2e/kWh",
+          "site_id": null,
+          "location_id": "mock-region-b",
+          "period": {
+            "start": "2026-10-01T00:00:00Z",
+            "end": "2026-11-01T00:00:00Z"
+          },
+          "boundary": "location-electricity",
+          "basis": "electricity",
+          "method": "synthetic-eimps",
+          "formula_version": "synthetic-location-time-lookup:v1",
+          "accounting_mode": "location-based",
+          "synthetic": true,
+          "input_references": [],
+          "factor_references": [
+            {
+              "factor_id": "mock-region-b-2026-10-synthetic",
+              "location_id": "mock-region-b",
+              "period": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z"
+              },
+              "value": 400,
+              "unit": "gCO2e/kWh",
+              "accounting_mode": "location-based",
+              "synthetic": true
+            }
+          ],
+          "dependencies": [],
+          "value": 400,
+          "result_id": "eimps-d0aa07595aab23dce2d39242ab646219a22dbf4dfddeeb264678e19b99149299"
+        },
+        "source_observation_id": "mock-SiteB-it-2026-10"
+      }
+    },
+    {
+      "site": "SiteB",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-b.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "facility-operations",
+      "method": "electricity-energy*pue-if-it*ci:v1",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "cim-kpi-eimps-1ee3cecc0235318701de388b102e6acec368aab3bf098b8b66b8dc2947e4ef9f",
+      "source_record_id": "eimps-6945d862b5667f380a59affe58f7297952249acfebcb6943452984767b3719ba",
+      "metric_id": "urn:greendigit:cim:draft:operational-co2e",
+      "value": 100.0,
+      "unit": "kgCO2e",
+      "original": {
+        "value": 100.0,
+        "unit": "kgCO2e"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "eimps-mock-v1",
+      "provenance": {
+        "source": "synthetic-eimps",
+        "field": "cfp",
+        "derived": true,
+        "synthetic": true,
+        "request": {
+          "schema_version": "eimps-mock-v1",
+          "type": "cfp",
+          "details": {
+            "period": {
+              "start": "2026-10-01T00:00:00Z",
+              "end": "2026-11-01T00:00:00Z"
+            },
+            "site_id": "SiteB",
+            "location_id": "mock-region-b",
+            "energy": {
+              "value": 200000,
+              "unit": "Wh",
+              "basis": "it",
+              "source_observation_id": "mock-SiteB-it-2026-10"
+            }
+          }
+        },
+        "response": {
+          "schema_version": "eimps-mock-v1",
+          "type": "cfp",
+          "metric_id": "urn:greendigit:cim:draft:operational-co2e",
+          "unit": "gCO2e",
+          "site_id": "SiteB",
+          "location_id": "mock-region-b",
+          "period": {
+            "start": "2026-10-01T00:00:00Z",
+            "end": "2026-11-01T00:00:00Z"
+          },
+          "boundary": "facility-operations",
+          "basis": "it",
+          "method": "synthetic-eimps",
+          "formula_version": "electricity-energy*pue-if-it*ci:v1",
+          "accounting_mode": "location-based",
+          "synthetic": true,
+          "input_references": [
+            {
+              "value": 200000,
+              "unit": "Wh",
+              "basis": "it",
+              "source_observation_id": "mock-SiteB-it-2026-10"
+            }
+          ],
+          "factor_references": [
+            {
+              "result_id": "eimps-43b7d1665056824953b811fdc372c49faf215fcc6a5672c773cab3ef0c23e6dd",
+              "used": true
+            },
+            {
+              "result_id": "eimps-d0aa07595aab23dce2d39242ab646219a22dbf4dfddeeb264678e19b99149299",
+              "used": true
+            }
+          ],
+          "dependencies": [
+            {
+              "schema_version": "eimps-mock-v1",
+              "type": "pue",
+              "metric_id": "urn:greendigit:cim:draft:pue",
+              "unit": "1",
+              "site_id": "SiteB",
+              "location_id": null,
+              "period": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z"
+              },
+              "boundary": "facility-to-it",
+              "basis": "facility/it",
+              "method": "synthetic-eimps",
+              "formula_version": "facility-energy/it-energy:v1",
+              "accounting_mode": "location-based",
+              "synthetic": true,
+              "input_references": [
+                {
+                  "value": 250,
+                  "unit": "kWh",
+                  "basis": "facility",
+                  "boundary_id": "SiteB-whole-site",
+                  "period": {
+                    "start": "2026-10-01T00:00:00Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  },
+                  "source_observation_id": "mock-SiteB-facility-2026-10"
+                },
+                {
+                  "value": 200,
+                  "unit": "kWh",
+                  "basis": "it",
+                  "boundary_id": "SiteB-whole-site",
+                  "period": {
+                    "start": "2026-10-01T00:00:00Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  },
+                  "source_observation_id": "mock-SiteB-it-2026-10"
+                }
+              ],
+              "factor_references": [],
+              "dependencies": [],
+              "value": 1.25,
+              "result_id": "eimps-43b7d1665056824953b811fdc372c49faf215fcc6a5672c773cab3ef0c23e6dd"
+            },
+            {
+              "schema_version": "eimps-mock-v1",
+              "type": "ci",
+              "metric_id": "urn:greendigit:cim:draft:carbon-intensity",
+              "unit": "gCO2e/kWh",
+              "site_id": null,
+              "location_id": "mock-region-b",
+              "period": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z"
+              },
+              "boundary": "location-electricity",
+              "basis": "electricity",
+              "method": "synthetic-eimps",
+              "formula_version": "synthetic-location-time-lookup:v1",
+              "accounting_mode": "location-based",
+              "synthetic": true,
+              "input_references": [],
+              "factor_references": [
+                {
+                  "factor_id": "mock-region-b-2026-10-synthetic",
+                  "location_id": "mock-region-b",
+                  "period": {
+                    "start": "2026-10-01T00:00:00Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  },
+                  "value": 400,
+                  "unit": "gCO2e/kWh",
+                  "accounting_mode": "location-based",
+                  "synthetic": true
+                }
+              ],
+              "dependencies": [],
+              "value": 400,
+              "result_id": "eimps-d0aa07595aab23dce2d39242ab646219a22dbf4dfddeeb264678e19b99149299"
+            }
+          ],
+          "value": 100000.0,
+          "result_id": "eimps-6945d862b5667f380a59affe58f7297952249acfebcb6943452984767b3719ba"
+        },
+        "source_observation_id": "mock-SiteB-it-2026-10"
+      }
+    },
+    {
+      "site": "SiteB",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-b.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "facility-operations",
+      "method": "electricity-energy*pue-if-it*ci:v1",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "cim-kpi-eimps-7ee8533c008d3d0db50b63c1abf4ea3958c2f06234594ba7bc9564f79a489124",
+      "source_record_id": "eimps-31b2426fabb311e34c509c4644d1cead032a1dda28e301439ca280478776cb02",
+      "metric_id": "urn:greendigit:cim:draft:operational-co2e",
+      "value": 100.0,
+      "unit": "kgCO2e",
+      "original": {
+        "value": 100.0,
+        "unit": "kgCO2e"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "eimps-mock-v1",
+      "provenance": {
+        "source": "synthetic-eimps",
+        "field": "cfp",
+        "derived": true,
+        "synthetic": true,
+        "request": {
+          "schema_version": "eimps-mock-v1",
+          "type": "cfp",
+          "details": {
+            "period": {
+              "start": "2026-10-01T00:00:00Z",
+              "end": "2026-11-01T00:00:00Z"
+            },
+            "site_id": "SiteB",
+            "location_id": "mock-region-b",
+            "energy": {
+              "value": 250000,
+              "unit": "Wh",
+              "basis": "facility",
+              "source_observation_id": "mock-SiteB-facility-2026-10"
+            }
+          }
+        },
+        "response": {
+          "schema_version": "eimps-mock-v1",
+          "type": "cfp",
+          "metric_id": "urn:greendigit:cim:draft:operational-co2e",
+          "unit": "gCO2e",
+          "site_id": "SiteB",
+          "location_id": "mock-region-b",
+          "period": {
+            "start": "2026-10-01T00:00:00Z",
+            "end": "2026-11-01T00:00:00Z"
+          },
+          "boundary": "facility-operations",
+          "basis": "facility",
+          "method": "synthetic-eimps",
+          "formula_version": "electricity-energy*pue-if-it*ci:v1",
+          "accounting_mode": "location-based",
+          "synthetic": true,
+          "input_references": [
+            {
+              "value": 250000,
+              "unit": "Wh",
+              "basis": "facility",
+              "source_observation_id": "mock-SiteB-facility-2026-10"
+            }
+          ],
+          "factor_references": [
+            {
+              "result_id": "eimps-43b7d1665056824953b811fdc372c49faf215fcc6a5672c773cab3ef0c23e6dd",
+              "used": false
+            },
+            {
+              "result_id": "eimps-d0aa07595aab23dce2d39242ab646219a22dbf4dfddeeb264678e19b99149299",
+              "used": true
+            }
+          ],
+          "dependencies": [
+            {
+              "schema_version": "eimps-mock-v1",
+              "type": "pue",
+              "metric_id": "urn:greendigit:cim:draft:pue",
+              "unit": "1",
+              "site_id": "SiteB",
+              "location_id": null,
+              "period": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z"
+              },
+              "boundary": "facility-to-it",
+              "basis": "facility/it",
+              "method": "synthetic-eimps",
+              "formula_version": "facility-energy/it-energy:v1",
+              "accounting_mode": "location-based",
+              "synthetic": true,
+              "input_references": [
+                {
+                  "value": 250,
+                  "unit": "kWh",
+                  "basis": "facility",
+                  "boundary_id": "SiteB-whole-site",
+                  "period": {
+                    "start": "2026-10-01T00:00:00Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  },
+                  "source_observation_id": "mock-SiteB-facility-2026-10"
+                },
+                {
+                  "value": 200,
+                  "unit": "kWh",
+                  "basis": "it",
+                  "boundary_id": "SiteB-whole-site",
+                  "period": {
+                    "start": "2026-10-01T00:00:00Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  },
+                  "source_observation_id": "mock-SiteB-it-2026-10"
+                }
+              ],
+              "factor_references": [],
+              "dependencies": [],
+              "value": 1.25,
+              "result_id": "eimps-43b7d1665056824953b811fdc372c49faf215fcc6a5672c773cab3ef0c23e6dd"
+            },
+            {
+              "schema_version": "eimps-mock-v1",
+              "type": "ci",
+              "metric_id": "urn:greendigit:cim:draft:carbon-intensity",
+              "unit": "gCO2e/kWh",
+              "site_id": null,
+              "location_id": "mock-region-b",
+              "period": {
+                "start": "2026-10-01T00:00:00Z",
+                "end": "2026-11-01T00:00:00Z"
+              },
+              "boundary": "location-electricity",
+              "basis": "electricity",
+              "method": "synthetic-eimps",
+              "formula_version": "synthetic-location-time-lookup:v1",
+              "accounting_mode": "location-based",
+              "synthetic": true,
+              "input_references": [],
+              "factor_references": [
+                {
+                  "factor_id": "mock-region-b-2026-10-synthetic",
+                  "location_id": "mock-region-b",
+                  "period": {
+                    "start": "2026-10-01T00:00:00Z",
+                    "end": "2026-11-01T00:00:00Z"
+                  },
+                  "value": 400,
+                  "unit": "gCO2e/kWh",
+                  "accounting_mode": "location-based",
+                  "synthetic": true
+                }
+              ],
+              "dependencies": [],
+              "value": 400,
+              "result_id": "eimps-d0aa07595aab23dce2d39242ab646219a22dbf4dfddeeb264678e19b99149299"
+            }
+          ],
+          "value": 100000.0,
+          "result_id": "eimps-31b2426fabb311e34c509c4644d1cead032a1dda28e301439ca280478776cb02"
+        },
+        "source_observation_id": "mock-SiteB-facility-2026-10"
+      }
+    }
+  ],
+  "ignored_fields": []
+}

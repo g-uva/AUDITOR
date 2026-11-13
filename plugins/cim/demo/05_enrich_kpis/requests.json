@@ -1,0 +1,40 @@
+[
+  {
+    "type": "pue",
+    "source_observation_id": "mock-SiteA-it-2026-10"
+  },
+  {
+    "type": "ci",
+    "source_observation_id": "mock-SiteA-it-2026-10",
+    "location_id": "mock-region-a"
+  },
+  {
+    "type": "cfp",
+    "source_observation_id": "mock-SiteA-it-2026-10",
+    "location_id": "mock-region-a"
+  },
+  {
+    "type": "cfp",
+    "source_observation_id": "mock-SiteA-facility-2026-10",
+    "location_id": "mock-region-a"
+  },
+  {
+    "type": "pue",
+    "source_observation_id": "mock-SiteB-it-2026-10"
+  },
+  {
+    "type": "ci",
+    "source_observation_id": "mock-SiteB-it-2026-10",
+    "location_id": "mock-region-b"
+  },
+  {
+    "type": "cfp",
+    "source_observation_id": "mock-SiteB-it-2026-10",
+    "location_id": "mock-region-b"
+  },
+  {
+    "type": "cfp",
+    "source_observation_id": "mock-SiteB-facility-2026-10",
+    "location_id": "mock-region-b"
+  }
+]

@@ -1,0 +1,124 @@
+{
+  "observations": [
+    {
+      "site": "SiteA",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-a.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "it-equipment",
+      "method": "synthetic-monthly-summary",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "mock-SiteA-it-2026-10",
+      "source_record_id": "mock-SiteA-it-2026-10",
+      "metric_id": "urn:greendigit:cim:draft:it-energy",
+      "value": 100000,
+      "unit": "Wh",
+      "original": {
+        "value": 100,
+        "unit": "kWh"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "synthetic-monthly-1",
+      "provenance": {
+        "source": "synthetic-prototype",
+        "field": "it-energy",
+        "synthetic": true
+      }
+    },
+    {
+      "site": "SiteA",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-a.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "facility",
+      "method": "synthetic-monthly-summary",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "mock-SiteA-facility-2026-10",
+      "source_record_id": "mock-SiteA-facility-2026-10",
+      "metric_id": "urn:greendigit:cim:draft:total-facility-energy",
+      "value": 150000,
+      "unit": "Wh",
+      "original": {
+        "value": 150,
+        "unit": "kWh"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "synthetic-monthly-1",
+      "provenance": {
+        "source": "synthetic-prototype",
+        "field": "facility-energy",
+        "synthetic": true
+      }
+    },
+    {
+      "site": "SiteB",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-b.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "it-equipment",
+      "method": "synthetic-monthly-summary",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "mock-SiteB-it-2026-10",
+      "source_record_id": "mock-SiteB-it-2026-10",
+      "metric_id": "urn:greendigit:cim:draft:it-energy",
+      "value": 200000,
+      "unit": "Wh",
+      "original": {
+        "value": 200,
+        "unit": "kWh"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "synthetic-monthly-1",
+      "provenance": {
+        "source": "synthetic-prototype",
+        "field": "it-energy",
+        "synthetic": true
+      }
+    },
+    {
+      "site": "SiteB",
+      "producer": "central-grid-producer",
+      "accounting_instance": "ce-b.example",
+      "instance_type": "grid",
+      "vo": "example-vo",
+      "scope": "monthly-summary",
+      "boundary": "facility",
+      "method": "synthetic-monthly-summary",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "observation_id": "mock-SiteB-facility-2026-10",
+      "source_record_id": "mock-SiteB-facility-2026-10",
+      "metric_id": "urn:greendigit:cim:draft:total-facility-energy",
+      "value": 250000,
+      "unit": "Wh",
+      "original": {
+        "value": 250,
+        "unit": "kWh"
+      },
+      "catalogue_version": "greendigit-draft-1",
+      "mapping_version": "synthetic-monthly-1",
+      "provenance": {
+        "source": "synthetic-prototype",
+        "field": "facility-energy",
+        "synthetic": true
+      }
+    }
+  ]
+}

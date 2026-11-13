@@ -22,3 +22,6 @@ def send_record(record: dict, pear_url: str, *, timeout: float = 10) -> dict:
 from .semantic import CIMError, catalogue, import_auditor, import_batch, validate, validate_batch
 from .representations import from_representation, to_representation
 from .targets import DeliveryError, export_draft, send_batch
+
+from .eimps import MetricsClient, Registration, MockRegistration, MockEIMPSClient
+from .enrichment import enrich

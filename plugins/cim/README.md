@@ -96,7 +96,7 @@ lists. Errors use `CIMError` (`ValueError`); delivery errors expose `delivered` 
 
 Definitions in `src/cim/data/catalogue-v1.json` are separate from observations.
 Each has an identifier, meaning, quantity kind, unit, boundary, allowed context
-and aggregation semantics. The five local terms cover total facility energy,
+and aggregation semantics. The original five local terms cover total facility energy,
 IT energy, water input, operational CO2e and separately provisional workload
 energy. Their URNs identify this implementation's draft, not approved ontology
 terms. The chapter itself was not supplied in the workspace: definitions are
@@ -199,7 +199,7 @@ The only target metric is provisional workload energy, exported as
 explicit `synthetic-prototype` source. Real source group naming awaits PEAR
 agreement; other sources fail. Facility metrics validate canonically but are not
 silently repurposed as workload energy. Benchmarks and additional entry tags fail
-export until a target mapping is agreed. There are no derived PUE, WUE or CUE KPIs.
+export until a target mapping is agreed. KPI enrichment below adds PUE, CI and CFP locally; none has a PEAR target mapping. WUE and CUE remain unimplemented.
 
 Producer stays in the canonical observation and provenance sidecar, outside the
 five-field key. The later producer-in-key/flat-values proposal remains unresolved.
@@ -229,3 +229,34 @@ The second suite needs the exporter's existing PyYAML dependency. HTTP checks bi
 isolated loopback receivers on ephemeral ports and write temporary files. No live
 submissions are used. The old job transport demo remains in the sibling
 [validation documentation](../../../pear-prototype/validation/README.md).
+
+## Offline CIM-KPI enrichment
+
+`cim enrich` and `cim.enrich` add distinct derived observations without changing
+measured inputs. Run the additional [step 05](demo/05_enrich_kpis/README.md), which
+keeps the original workload-energy/PEAR demo intact. This step uses separate,
+explicit IT and facility energy fixtures; it never relabels workload energy.
+
+```bash
+cim enrich demo/05_enrich_kpis/energy-inputs.json \
+  --requests demo/05_enrich_kpis/requests.json --output /tmp/cim-enriched.json
+```
+
+The `--requests` file contains CIM selection plans, **not** raw service requests:
+`[{"type": "cfp", "source_observation_id": "mock-SiteA-it-2026-10",
+"location_id": "mock-region-a"}]`. The selected canonical observation supplies
+site, period, energy value/unit and basis. PUE plans omit location; CI and CFP
+plans require it. PUE and CI can use any valid observation as their site/period
+attachment context. CFP accepts only explicit IT or facility energy metrics.
+
+```python
+from cim import enrich, MockEIMPSClient
+
+# observations are a validated canonical list; plans select explicit observations.
+enriched = enrich(observations, plans, client=MockEIMPSClient())
+```
+
+See [the mock contract](docs/eimps-mock.md) for units, response lineage, explicit
+failure behavior and replacement interfaces. New local PUE and CI definitions
+extend the draft catalogue; CFP reuses operational CO2e (kgCO2e). All derived
+observations remain unsupported by PEAR export/send, which fails preflight.

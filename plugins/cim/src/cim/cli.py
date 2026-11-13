@@ -14,9 +14,10 @@ def read(path):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(prog='cim')
-    parser.add_argument('command', choices=('validate', 'convert', 'send'))
+    parser.add_argument('command', choices=('validate', 'convert', 'send', 'enrich'))
     parser.add_argument('input')
     parser.add_argument('--input-format', choices=('auditor', 'canonical', 'saref', 'schemaorg'), default='canonical')
+    parser.add_argument('--requests', help='JSON enrichment plans: type, source_observation_id, location_id')
     parser.add_argument('--mapping')
     parser.add_argument('--context')
     parser.add_argument('--output-format', choices=('canonical', 'saref', 'schemaorg', TARGET), default='canonical')
@@ -43,7 +44,11 @@ def main(argv=None):
         for field in ignored:
             print('ignored: ' + json.dumps(field), file=sys.stderr)
         result = {'observations': observations, 'ignored_fields': ignored}
-        if args.command == 'send' or (args.command == 'convert' and args.output_format == TARGET):
+        if args.command == 'enrich':
+            from .enrichment import enrich
+            require(args.requests, 'enrich requires --requests')
+            result['observations'] = enrich(observations, read(args.requests))
+        elif args.command == 'send' or (args.command == 'convert' and args.output_format == TARGET):
             require(args.sidecar, 'draft output/send requires --sidecar to retain local provenance')
             require(not args.output or Path(args.sidecar).resolve() != Path(args.output).resolve(), 'sidecar and output must be separate files')
             require(Path(args.sidecar).resolve() != Path(args.input).resolve(), 'sidecar must not overwrite input')

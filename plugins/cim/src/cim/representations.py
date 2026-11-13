@@ -8,7 +8,7 @@ SCHEMA = 'https://schema.org/'
 CONTEXT = {'gd': GD, 'saref': SAREF, 'schema': SCHEMA,
            'gd:metadata': {'@id': GD + 'metadata', '@type': '@json'}}
 # Local unit identifiers avoid implying a third-party unit catalogue endorsement.
-UNITS = {unit: GD + 'unit:' + unit for unit in ('Wh', 'L', 'kgCO2e')}
+UNITS = {unit: GD + 'unit:' + unit for unit in ('Wh', 'L', 'kgCO2e', '1', 'gCO2e/kWh')}
 
 
 def to_representation(observation, representation):

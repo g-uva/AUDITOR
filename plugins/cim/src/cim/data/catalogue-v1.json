@@ -116,6 +116,52 @@
         ]
       },
       "aggregation": "Period total. Only disjoint periods and non-overlapping boundaries may be added by a caller; existing summaries must not be re-aggregated. CIM performs no aggregation."
+    },
+    "urn:greendigit:cim:draft:pue": {
+      "identifier": "urn:greendigit:cim:draft:pue",
+      "meaning": "Facility energy divided by IT energy for the same period and compatible site boundaries",
+      "quantity_kind": "ratio",
+      "unit": "1",
+      "boundary": "facility-to-it",
+      "status": "draft",
+      "allowed_context": {
+        "scope": [
+          "job",
+          "monthly-summary"
+        ],
+        "required": [
+          "site",
+          "producer",
+          "accounting_instance",
+          "instance_type",
+          "period",
+          "method"
+        ]
+      },
+      "aggregation": "Not additive; do not average without explicit weighting. No aggregation performed by CIM."
+    },
+    "urn:greendigit:cim:draft:carbon-intensity": {
+      "identifier": "urn:greendigit:cim:draft:carbon-intensity",
+      "meaning": "Electricity emissions intensity for a declared location, period and accounting mode",
+      "quantity_kind": "emissions-intensity",
+      "unit": "gCO2e/kWh",
+      "boundary": "location-electricity",
+      "status": "draft",
+      "allowed_context": {
+        "scope": [
+          "job",
+          "monthly-summary"
+        ],
+        "required": [
+          "site",
+          "producer",
+          "accounting_instance",
+          "instance_type",
+          "period",
+          "method"
+        ]
+      },
+      "aggregation": "Not additive; do not average without explicit weighting. No aggregation performed by CIM."
     }
   }
 }

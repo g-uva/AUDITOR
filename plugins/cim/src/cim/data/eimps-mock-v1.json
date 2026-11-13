@@ -1,0 +1,110 @@
+{
+  "schema_version": "eimps-mock-v1",
+  "synthetic": true,
+  "sites": {
+    "SiteA": {
+      "canonical_name": "SiteA",
+      "locations": [
+        "mock-region-a"
+      ]
+    },
+    "SiteB": {
+      "canonical_name": "SiteB",
+      "locations": [
+        "mock-region-b"
+      ]
+    }
+  },
+  "locations": [
+    "mock-region-a",
+    "mock-region-b"
+  ],
+  "pue_inputs": [
+    {
+      "site_id": "SiteA",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "boundary_id": "SiteA-whole-site",
+      "facility_energy": {
+        "value": 150,
+        "unit": "kWh",
+        "basis": "facility",
+        "boundary_id": "SiteA-whole-site",
+        "period": {
+          "start": "2026-10-01T00:00:00Z",
+          "end": "2026-11-01T00:00:00Z"
+        },
+        "source_observation_id": "mock-SiteA-facility-2026-10"
+      },
+      "it_energy": {
+        "value": 100,
+        "unit": "kWh",
+        "basis": "it",
+        "boundary_id": "SiteA-whole-site",
+        "period": {
+          "start": "2026-10-01T00:00:00Z",
+          "end": "2026-11-01T00:00:00Z"
+        },
+        "source_observation_id": "mock-SiteA-it-2026-10"
+      }
+    },
+    {
+      "site_id": "SiteB",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "boundary_id": "SiteB-whole-site",
+      "facility_energy": {
+        "value": 250,
+        "unit": "kWh",
+        "basis": "facility",
+        "boundary_id": "SiteB-whole-site",
+        "period": {
+          "start": "2026-10-01T00:00:00Z",
+          "end": "2026-11-01T00:00:00Z"
+        },
+        "source_observation_id": "mock-SiteB-facility-2026-10"
+      },
+      "it_energy": {
+        "value": 200,
+        "unit": "kWh",
+        "basis": "it",
+        "boundary_id": "SiteB-whole-site",
+        "period": {
+          "start": "2026-10-01T00:00:00Z",
+          "end": "2026-11-01T00:00:00Z"
+        },
+        "source_observation_id": "mock-SiteB-it-2026-10"
+      }
+    }
+  ],
+  "ci_factors": [
+    {
+      "factor_id": "mock-region-a-2026-10-synthetic",
+      "location_id": "mock-region-a",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "value": 200,
+      "unit": "gCO2e/kWh",
+      "accounting_mode": "location-based",
+      "synthetic": true
+    },
+    {
+      "factor_id": "mock-region-b-2026-10-synthetic",
+      "location_id": "mock-region-b",
+      "period": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-11-01T00:00:00Z"
+      },
+      "value": 400,
+      "unit": "gCO2e/kWh",
+      "accounting_mode": "location-based",
+      "synthetic": true
+    }
+  ]
+}
